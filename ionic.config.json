@@ -1,0 +1,8 @@
+{
+  "name": "Ayutel",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

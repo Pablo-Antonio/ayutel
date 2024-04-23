@@ -1,0 +1,163 @@
+<!--<ion-content>
+  <div class="text_end">
+    <div class="row">
+      <div class="col-6">
+        <img src="../../../assets/img/facebook.png" (click)="openFacebook()" width="30px" />
+        <img src="../../../assets/img/IG.png" (click)="openIg()" width="30px" />
+      </div>
+      <br />
+      <a (click)="openAdd()">e-egg.com.mx</a>
+      <br><br><br>
+      <a [routerLink]="['/notice-privacy']">Aviso de privacidad</a>
+      <a [routerLink]="['/terms-conditions']">Términos y condiciones</a>
+    </div>
+    <p (click)="openAdd()">Powered by Addinteli 2022</p>
+  </div>
+
+  <div style="margin: 100px 0px; text-align: center">
+    <img src="../../../assets/img/Ayutel logo.png" width="60%" />
+    <br />
+    <br />
+    <h1>Menú principal</h1>
+  </div>
+  
+  <ion-button [routerLink]="['/balance']" expand="block" color="white">
+    <div class="text_left">
+      <ion-icon slot="start" name="square"></ion-icon>
+      Consulta tu saldo
+    </div>
+  </ion-button>
+
+  
+  <ion-button (click)="openAdd()" expand="block" color="white">
+    <div class="text_left">
+      <ion-icon slot="start" name="square"></ion-icon>
+      Recargar plan
+    </div>
+  </ion-button>
+
+  <ion-button [routerLink]="['/info']" expand="block" color="white">
+    <div class="text_left">
+      <ion-icon slot="start" name="square"></ion-icon>
+      Contacto
+    </div>
+  </ion-button>
+
+</ion-content>-->
+
+<app-header [bkButton]="false"></app-header>
+
+<ion-content fullscreen="true">
+
+  <div class="text_end">
+    <div class="row">
+      <div class="col-6">
+        <img src="../../../assets/img/facebook.png" (click)="openFacebook()" width="30px" />
+        <!--<img src="../../../assets/img/IG.png" (click)="openIg()" width="30px" />-->
+      </div>
+      <br />
+    </div>
+    <p>Powered by  <b style="text-decoration: none; color: #fff;" (click)="openAdd()">Addinteli</b> 2024</p>
+  </div>
+
+
+  <div style="margin: 50px 0px; text-align: center;" >
+    <img src="../../../assets/img/Ayutel logo.png" width="60%"  alt="">
+  </div>
+
+  <div style="text-align: center">
+    <app-page-title [title]="title"></app-page-title>
+  </div>
+
+  <!--<ion-list>
+
+    <ion-item routerLink="/balance" detail>
+      <ion-icon slot="start" name="bar-chart" color="primary"></ion-icon>
+      Consulta de Saldo
+    </ion-item>
+
+    <ion-item (click)="openAdd()" detail>
+      <ion-icon slot="start" name="reload-circle" color="primary"></ion-icon>
+      Recargar Plan
+    </ion-item>
+
+    <ion-item *ngFor="let page of pages" [routerLink]="page.redirectTo" detail>
+      <ion-icon slot="start" [name]="page.icon" color="primary"></ion-icon>
+      {{page.name | titlecase}}
+    </ion-item>
+
+  </ion-list>-->
+
+  <ion-button (click)="recarga()" expand="block" color="white">
+    <div class="text_left">
+      <ion-icon slot="start" name="reload-circle"></ion-icon>
+      Recargar plan
+    </div>
+  </ion-button>
+
+  <ion-button *ngFor="let page of pages" [routerLink]="page.redirectTo" expand="block" color="white">
+    <div class="text_left">
+      <ion-icon slot="start" [name]="page.icon"></ion-icon>
+      {{page.name | titlecase}}
+    </div>
+  </ion-button>
+
+</ion-content>
+
+<app-footer></app-footer>
+
+<style>
+  * {
+    color: #000970;
+  }
+
+  ion-button {
+    margin: 0;
+    padding: 8px 0;
+    height: auto;
+    font-size: 17px;
+  }
+
+  .text_left {
+    width: 100%;
+    padding: 8px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+  }
+
+  .text_left ion-icon {
+    margin-right: 8px;
+    font-size: small;
+  }
+
+  .text_end {
+    width: 100%;
+    position: absolute;
+    top: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 300;
+    font-size: small;
+  }
+
+  p{
+    color: white;
+  }
+
+  .row a {
+    color: rgba(255, 255, 255, 0.603);
+    text-decoration: none;
+    font-size: small;
+    margin-right: 10px;
+  }
+
+  .row img {
+    margin-right: 10px;
+  }
+</style>
+

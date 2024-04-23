@@ -1,0 +1,135 @@
+<app-header></app-header>
+
+<ion-content fullscreen="true">
+  
+  <div style="margin: 5px 0px; text-align: center; padding: 5px 0px;">
+    <app-page-title [title]="title"></app-page-title>
+  </div>
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>SOPORTE</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <p class="ion-text-justify">
+        Esta aplicación móvil ha sido diseñada y desarrollada por Addinteli. 
+        En este espacio podrás compartirnos tus dudas, solicitudes o comentarios 
+        referente al servicio Ayutel.
+      </p>
+      <br>
+      <p>
+        Correo de Contacto: <ion-text color="danger">soportealcliente@addinteli.com.mx </ion-text> o puedes llamar al <ion-text color="danger">55 8993 1510</ion-text>  
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <form [formGroup]="commentForm" (submit)="submit()">
+        <p>Correo:</p>
+        <ion-item>
+          <ion-input formControlName="email" maxlength="128"></ion-input>
+        </ion-item>
+        <p>Asunto:</p>
+        <ion-item>
+          <ion-input formControlName="subject" maxlength="32"></ion-input>
+        </ion-item>
+        <p>Escribe tu mensaje:</p>
+        <ion-item>
+          <ion-textarea formControlName="comment" maxlength="250"></ion-textarea>
+        </ion-item>
+        <ion-button type="submit" [disabled]="!commentForm.valid">Enviar</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<!--<app-header></app-header>
+
+<ion-content fullscreen="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>CONTACTO</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Esta app móvil ha sido diseñada y desarrollada por Addinteli. En este espacio podrás compartirnos tus dudas, solicitudes o comentarios referente al servicio E-Egg.
+      <br><br>
+      Correo de contacto: <span>store@e-egg.game</span> o puedes llamar al <span>55 8993 1510</span>.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <form [formGroup]="commentForm" (submit)="submit()">
+        <p>Correo:</p>
+        <ion-item>
+          <ion-input formControlName="email" maxlength="128"></ion-input>
+        </ion-item>
+        <p>Asunto:</p>
+        <ion-item>
+          <ion-input formControlName="subject" maxlength="32"></ion-input>
+        </ion-item>
+        <p>Escribe tu mensaje:</p>
+        <ion-item>
+          <ion-textarea formControlName="comment" maxlength="250"></ion-textarea>
+        </ion-item>
+        <ion-button type="submit" [disabled]="!commentForm.valid">Enviar</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>-->
+
+<style>
+  ion-button {
+    --background: #000970;
+    --border-radius: 5px;
+    --color: white;
+    --height: 50px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  ion-card {
+    background-color: transparent;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  ion-item {
+    --border-radius: 5px;
+    --height: 50px;
+  }
+
+  ion-card-title {
+    font-size: medium;
+    font-weight: 600;
+    color: black;
+    margin-left: -10px;
+  }
+
+  ion-card-content {
+    color: black;
+    font-weight: 400;
+    margin-left: -10px;
+    text-align: justify;
+    font-size: small;
+    padding-top: 0;
+  }
+
+  span {
+    color: white;
+    font-weight: 400;
+  }
+
+  p {
+    color: black;
+    font-weight: 400;
+    font-size: medium;
+    margin: 5px 0;
+  }
+
+</style>
+
+<app-footer></app-footer>
